@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>無人機路線飛行模擬專案</title>
+  <title>drone_simulation</title>
   <style>
     :root {
       --bg: #08111f;
@@ -214,7 +214,7 @@
 <body>
   <div class="wrap">
     <nav class="nav">
-      <div class="brand">無人機路線飛行模擬專案</div>
+      <div class="brand">drone_simulation</div>
       <div class="nav-links">
         <a href="#overview">專案目標</a>
         <a href="#stack">技術棧</a>
@@ -226,9 +226,10 @@
 
     <section class="hero">
       <div class="card">
-        <h1>把無人機模擬、航點任務與 Python 控制串起來</h1>
+        <h1>drone_simulation</h1>
         <p class="lead">
-          這是一個單頁版的專案入口。目標是先完成最小可運行測試：
+          無人機模擬、航點任務與 Python 控制的單頁專案入口。
+          先完成最小可運行測試：
           <strong>連線 → 解鎖 → 起飛 → 返航</strong>，再往航線任務擴充。
         </p>
         <div class="pills">
@@ -243,53 +244,53 @@
 
       <div class="side-box">
         <div class="stat">
-          <strong>專案狀態</strong>
+          <strong>project</strong>
           已建立公開 GitHub 倉庫，並上傳初始內容。
         </div>
         <div class="stat">
-          <strong>現在重點</strong>
+          <strong>focus</strong>
           先驗證模擬器與 Python 的基本通訊是否穩定。
         </div>
         <div class="stat">
-          <strong>建議路線</strong>
+          <strong>flow</strong>
           先用 QGroundControl 驗證流程，再切到 Python 自動化。
         </div>
       </div>
     </section>
 
     <section id="overview" class="section">
-      <h2>專案目標</h2>
+      <h2>drone_simulation</h2>
       <div class="grid-2">
         <div class="item">
-          <h3>你要解決什麼</h3>
+          <h3>goal</h3>
           <p>讓無人機在模擬環境中，依照航點順序自動飛行，並在任務結束後返航或降落。</p>
         </div>
         <div class="item">
-          <h3>最小成功條件</h3>
+          <h3>minimum path</h3>
           <p>先確認模擬器可被 Python 連線，並成功完成 arm、takeoff、return-to-launch 這幾個動作。</p>
         </div>
       </div>
     </section>
 
     <section id="stack" class="section">
-      <h2>技術棧</h2>
+      <h2>drone_simulation stack</h2>
       <div class="grid-3">
         <div class="item">
-          <h3>模擬器</h3>
+          <h3>simulator</h3>
           <ul>
             <li>SITL</li>
             <li>Gazebo 或 jMAVSim</li>
           </ul>
         </div>
         <div class="item">
-          <h3>飛控韌體</h3>
+          <h3>autopilot</h3>
           <ul>
             <li>PX4</li>
             <li>ArduPilot</li>
           </ul>
         </div>
         <div class="item">
-          <h3>控制層</h3>
+          <h3>control</h3>
           <ul>
             <li>MAVLink</li>
             <li>MAVSDK-Python</li>
@@ -299,25 +300,25 @@
     </section>
 
     <section id="flow" class="section">
-      <h2>核心流程</h2>
+      <h2>drone_simulation flow</h2>
       <div class="flow">
-        <div>初始化連線</div>
-        <div>解鎖並起飛</div>
-        <div>上傳航點</div>
-        <div>執行航線</div>
-        <div>返航／降落</div>
+        <div>connect</div>
+        <div>arm + takeoff</div>
+        <div>upload waypoints</div>
+        <div>run mission</div>
+        <div>rtl / land</div>
       </div>
     </section>
 
     <section id="setup" class="section">
-      <h2>環境設定</h2>
+      <h2>drone_simulation setup</h2>
       <div class="grid-2">
         <div class="item">
-          <h3>專案資料夾</h3>
+          <h3>project folder</h3>
           <pre><code>C:\Users\kodyf\Desktop\drone_simulation_project</code></pre>
         </div>
         <div class="item">
-          <h3>Python 虛擬環境</h3>
+          <h3>python venv</h3>
           <pre><code>py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install mavsdk</code></pre>
@@ -327,10 +328,10 @@ pip install mavsdk</code></pre>
     </section>
 
     <section id="next" class="section">
-      <h2>下一步</h2>
+      <h2>drone_simulation next</h2>
       <div class="grid-2">
         <div class="item">
-          <h3>先跑最小測試</h3>
+          <h3>minimum test</h3>
           <ul>
             <li>連線到 <code>udp://:14540</code></li>
             <li>arm</li>
@@ -339,7 +340,7 @@ pip install mavsdk</code></pre>
           </ul>
         </div>
         <div class="item">
-          <h3>成功後再做</h3>
+          <h3>after that</h3>
           <ul>
             <li>航點上傳</li>
             <li>航線執行</li>
@@ -350,7 +351,7 @@ pip install mavsdk</code></pre>
     </section>
 
     <div class="footer">
-      這個頁面是單頁 HTML 版本。原始 Markdown 仍保留在專案中，方便後續同步更新內容。
+      drone_simulation page. 原始 Markdown 仍保留在專案中，方便後續同步更新內容。
     </div>
   </div>
 </body>
